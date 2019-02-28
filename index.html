@@ -1,0 +1,101 @@
+<!-- This is the root page -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wanfei Luo | Welcome</title>
+
+        <!-- CSS links -->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/socialButton.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var x = document.lastModified;
+                //document.getElementById("footerEdit").innerHTML = x;
+                $('footer').append(x);
+
+                // Add smooth scrolling to all links
+                $("a").on('click', function(event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+                
+                        // Store hash
+                        var hash = this.hash;
+                
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                    
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });                
+        </script>
+    </head>
+
+    <body>
+        <div class="sec-one">
+            <section>
+                <!-- Navigation Bar -->
+                <nav>
+                    <div class="tag">Welcome | Wanfei Luo</div>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="#sec-two">Projects</a></li>
+                        <li><a class="active" href="index.html">Home</a></li>
+                    </ul>
+                </nav>
+    
+                <div id="profile"><img src="img/profile.png" width="250" height="250"></div>
+
+                <!-- Main body of the front page -->
+                <div class="mainBody">
+                    Hi, my name is <b style="color: #3C588F;">Wanfei Luo</b><br />
+                    I'm a Data Analyst<br />
+                    Welcome to my web page
+                </div>
+
+                <hr style="border-top: 1px solid #E9E9E9;" width="30%">
+                
+                <div id="code-link">
+                    <img src="img/github-logo.png">
+                    <a href="https://github.com/felicia1017">Code</a>
+                </div>
+
+                <div id="social">
+                    <!-- <a class="facebookBtn smGlobalBtn" href="#" ></a><br>
+                    <a class="twitterBtn smGlobalBtn" href="#" ></a><br> -->
+                    <a class="googleplusBtn smGlobalBtn" href="https://plus.google.com/109336417115455676918" ></a><br>
+                    <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/wanfei-felicia-luo-7b8746140/" ></a><br>
+                    <a class="githubBtn smGlobalBtn" href="https://github.com/felicia1017" ></a><br>
+                    <!-- <a class="pinterestBtn smGlobalBtn" href="#" ></a><br>
+                    <a class="tumblrBtn smGlobalBtn" href="#" ></a><br>
+                    <a class="rssBtn smGlobalBtn" href="#" ></a><br> -->
+                </div>
+                
+            </section>  
+       </div>
+       
+       <div id="sec-two">
+           <section style="background-color: #F8F8F8">
+                <p id="sec-two-title">Projects</p>
+                <div id="block"><a href="https://github.com/felicia1017/Skin-Cancer-Recognition">Skin Cancer Recognition  <span class="repo-lan-tag" style="color: white; background-color: #3572A5;">Python</span><p id="p">Neural Network</p></a></div>
+                <div id="block"><a href="https://github.com/felicia1017/DB-ANOMALOUS-DETECTION">DB ANOMALOUS DETECTION  <span class="repo-lan-tag" style="color: white; background-color: #3572A5;">Python</span><p id="p">ANOMALOUS DETECTION</p></a></div>
+                <br>
+                <button style="margin-top: 100px;" onclick="window.location.href='https://github.com/felicia1017'" class="btn draw-border">Learn More</button>
+           </section>
+
+           <footer id="footerEdit" class="footer">&copy; 2018 Wanfei Luo. <br> Last Modified: </footer>
+       </div> 
+       
+       
+    </body>
+</html>
