@@ -1,101 +1,462 @@
-<!-- This is the root page -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Wanfei Luo | Welcome</title>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-        <!-- CSS links -->
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/socialButton.css" />
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Felicia Luo Homepage</title>
+	<meta name="description" content="Uses as felicia's personal website to demostrate her projects.">
+	<meta name="author" content="Felicia Luo">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                var x = document.lastModified;
-                //document.getElementById("footerEdit").innerHTML = x;
-                $('footer').append(x);
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-                // Add smooth scrolling to all links
-                $("a").on('click', function(event) {
-                    // Make sure this.hash has a value before overriding default behavior
-                    if (this.hash !== "") {
-                        // Prevent default anchor click behavior
-                        event.preventDefault();
-                
-                        // Store hash
-                        var hash = this.hash;
-                
-                        // Using jQuery's animate() method to add smooth page scroll
-                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                        $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                        }, 800, function(){
-                    
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                        });
-                    } // End if
-                });
-            });                
-        </script>
-    </head>
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
 
-    <body>
-        <div class="sec-one">
-            <section>
-                <!-- Navigation Bar -->
-                <nav>
-                    <div class="tag">Welcome | Wanfei Luo</div>
-                    <ul>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="aboutme.html">About Me</a></li>
-                        <li><a href="#sec-two">Projects</a></li>
-                        <li><a class="active" href="index.html">Home</a></li>
-                    </ul>
-                </nav>
-    
-                <div id="profile"><img src="img/profile.png" width="250" height="250"></div>
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
 
-                <!-- Main body of the front page -->
-                <div class="mainBody">
-                    Hi, my name is <b style="color: #3C588F;">Wanfei Luo</b><br />
-                    I'm a Data Analyst<br />
-                    Welcome to my web page
-                </div>
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
 
-                <hr style="border-top: 1px solid #E9E9E9;" width="30%">
-                
-                <div id="code-link">
-                    <img src="img/github-logo.png">
-                    <a href="https://github.com/felicia1017">Code</a>
-                </div>
+</head>
 
-                <div id="social">
-                    <!-- <a class="facebookBtn smGlobalBtn" href="#" ></a><br>
-                    <a class="twitterBtn smGlobalBtn" href="#" ></a><br> -->
-                    <a class="googleplusBtn smGlobalBtn" href="https://plus.google.com/109336417115455676918" ></a><br>
-                    <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/wanfei-felicia-luo-7b8746140/" ></a><br>
-                    <a class="githubBtn smGlobalBtn" href="https://github.com/felicia1017" ></a><br>
-                    <!-- <a class="pinterestBtn smGlobalBtn" href="#" ></a><br>
-                    <a class="tumblrBtn smGlobalBtn" href="#" ></a><br>
-                    <a class="rssBtn smGlobalBtn" href="#" ></a><br> -->
-                </div>
-                
-            </section>  
-       </div>
-       
-       <div id="sec-two">
-           <section style="background-color: #F8F8F8">
-                <p id="sec-two-title">Projects</p>
-                <div id="block"><a href="https://github.com/felicia1017/Skin-Cancer-Recognition">Skin Cancer Recognition  <span class="repo-lan-tag" style="color: white; background-color: #3572A5;">Python</span><p id="p">Neural Network</p></a></div>
-                <div id="block"><a href="https://github.com/felicia1017/DB-ANOMALOUS-DETECTION">DB ANOMALOUS DETECTION  <span class="repo-lan-tag" style="color: white; background-color: #3572A5;">Python</span><p id="p">ANOMALOUS DETECTION</p></a></div>
-                <br>
-                <button style="margin-top: 100px;" onclick="window.location.href='https://github.com/felicia1017'" class="btn draw-border">Learn More</button>
-           </section>
+<body>
 
-           <footer id="footerEdit" class="footer">&copy; 2018 Wanfei Luo. <br> Last Modified: </footer>
-       </div> 
-       
-       
-    </body>
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Blogs</a></li>
+          
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Felicia (Wanfei) Luo.</h1>
+            <h3>I'm a NJ based <span>data analyst</span>, interested in machine learning and
+            effective data visualiaztion using different kinds of tools. Plz <a class="smoothscroll" href="#about">scroll</a> down and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr />
+            <ul class="social">
+      
+               <li><a href="https://twitter.com/felicia_luo1017"><i class="fa fa-twitter"></i></a></li>
+               <!--<li><a href="#"><i class="fa fa-weibo"></i></a></li> -->
+               <li><a href="https://www.linkedin.com/in/wanfei-felicia-luo-7b8746140/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/felicia1017"><i class="fa fa-github"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="/Users/wanfeiluo/Downloads/Ceevee10/felicia_headshot.jpg" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>I am a data analytics graduate student at Rutgers University - New Brunswick New Jersey. My legal name is Wanfei Luo（chineses: 罗宛绯) but I also ask 
+               my friends to call me Felicia. 
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Felicia Luo</span><br>
+						   <span>527 Old Bridge TPKE<br>
+						         East Brunswick, NJ 08816 US
+                     </span><br>
+						   <span>(732)532-9054</span><br>
+                     <span>luowanfei@gmail.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Rutgers University - New Brunswick, New Jersey</h3>
+                  <p class="info">Master in Data Analytics <span>&bull;</span> <em class="date">May 2020</em></p>
+
+                  <p>
+                  Where I learned and honed my analytical skills and decided to become a data-driven analyst.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Rutgers University - New Brunswick, New Jersey</h3>
+                  <p class="info">B.A. Degree in Economics, minored in Statistics <span>&bull;</span> <em class="date">May 2018</em></p>
+
+                  <p>
+                  I love studying Economics as it helps me to better observe the crazy world.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Legg Mason</h3>
+                  <p class="info">One-year Next-gen Data Analyst Intern<span>&bull;</span> <em class="date">May 2019 - May 2020</em></p>
+
+                  <p>
+                  A global asset management company headquarted in Baltimore, MD. My office is in New York City.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Beckton Dickinson </h3>
+                  <p class="info">Data Analyst Extern <span>&bull;</span> <em class="date">September 2018 - February 2019</em></p>
+
+                  <p>
+                  Anomaly Detection Project
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>I have strong passion on using data to explain things, to discover patterns, and to understand the world.
+            </p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand python_language"></span><em>Python Language</em></li>
+                  <li><span class="bar-expand sql"></span><em>SQL</em></li>
+						<li><span class="bar-expand tableau"></span><em>Tableau</em></li>
+						<li><span class="bar-expand excel"></span><em>Excel</em></li>
+						<li><span class="bar-expand machine_learning"></span><em>Machine Learning</em></li>
+                  <li><span class="bar-expand css_html"></span><em>CSS HTML5</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Projects</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+          	   <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-01" title="">
+                        <img alt="" src="images/portfolio/anomalydetection_profile.png">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Travel & Expenses - Anomaly Detection</h5>
+                              <p>NLP</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="images/portfolio/Managerial Dashboard_Tableau_Design_Demo_WanfeiLuo.png">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>PM Managerial Dashboard</h5>
+                              <p>Tableau, Data visualiaztion</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="images/portfolio/juda.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>DICOM Machine Classification</h5>
+                              <p>Image Classification, Tensorflow, OpenCV2</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="images/portfolio/int.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Money Market Fund Cashflow Prediction</h5>
+                              <p>Random Forest, Time Series, Python</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+   
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/anomalydetection_profile.png" alt="" />
+
+		      <div class="description-box">
+			      <h4>Anomaly Detection</h4>
+			      <p>This is a data analysis externship project I've done with 1 more teammate during my senior year. This was also the first time I tried to implement NLP.</p>
+               <span class="categories"><i class="fa fa-tag"></i>NLP,Python,Teamwork</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="https://github.com/felicia1017/AnomalyDetection-bd">Details</a>s
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>PM Managerial Dashboard</h4>
+			      <p>This is a Tableau Dashboard I've done from scratch, including setting up desired Redshift DB schemas/views and desiging the dashboards by collaborating with the users to presenting to the PM team during my 1-year internship.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Redshift, PostgreSQL, Tableau</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="//">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Judah</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="//">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Into the Light</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="//">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+         
+               <li><a href="https://twitter.com/felicia_luo1017"><i class="fa fa-twitter"></i></a></li>
+              <!---- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
+               <li><a href="https://www.linkedin.com/in/wanfei-felicia-luo-7b8746140/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/felicia1017"><i class="fa fa-github"></i></a></li>
+            </ul>
+
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+</body>
+
 </html>
