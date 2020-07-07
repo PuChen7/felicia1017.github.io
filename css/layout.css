@@ -209,7 +209,7 @@ ul#nav li.current a { color: #F06000; }
    position: relative;
    width: 180px;
    height: 210px;
-   border-radius: 0%;
+   border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
